@@ -1,7 +1,7 @@
 __Joanna Hsu__
 __i290__ : Data Mining Analysis
 
-# Homework 1
+# HW 1
 ---
 
 #### 8 Questions
