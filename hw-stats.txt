@@ -1,0 +1,190 @@
+__Joanna Hsu__
+HW2: stats
+I290
+Feb 14, 2013
+
+4 STATS
+After removing the 8,120 negative campaign contributions:
+[1] "Minimum = 0.09"
+[1] "Maximum = 30000"
+[1] "Mean = 175.7274"
+[1] "Median = 50"
+[1] "Standard deviation = 422.687"
+[1] "Mean = 175.7274"
+
+The different candidates are:
+[1] Bachmann, Michele              Cain, Herman                  
+ [3] Gingrich, Newt                 Huntsman, Jon                 
+ [5] Johnson, Gary Earl             McCotter, Thaddeus G          
+ [7] Obama, Barack                  Paul, Ron                     
+ [9] Pawlenty, Timothy              Perry, Rick                   
+[11] Roemer, Charles E. 'Buddy' III Romney, Mitt                  
+[13] Santorum, Rick                 Stein, Jill        
+
+The normalized contributions transform the data into numbers between 0 and 1.  Like the original data, they are very right-skewed, with many small numbers and a few very large numbers. The first six normalized contributions are as follows (all normalized contributions-available by executing code):
+> head(d) #original contribution
+[1]  15  35  25 100 500  56
+> head(f) #normalized contributions
+[1] 0.0004969985 0.0011636632 0.0008303308 0.0033303233 0.0166636167
+[6] 0.0018636611
+
+6 EXTRA CREDIT
+Statistics by candidate:
+
+[1] "For candidate Bachmann, Michele:"
+[1] "Minimum = 1"
+[1] "Maximum = 5000"
+[1] "Mean = 192.5933"
+[1] "Median = 100"
+[1] "Standard deviation = 328.5277"
+[1] "Mean = 192.5933"
+[1] "For candidate Cain, Herman:"
+[1] "Minimum = 5"
+[1] "Maximum = 5000"
+[1] "Mean = 358.0741"
+[1] "Median = 250"
+[1] "Standard deviation = 503.4396"
+[1] "Mean = 358.0741"
+[1] "For candidate Gingrich, Newt:"
+[1] "Minimum = 0.49"
+[1] "Maximum = 5000"
+[1] "Mean = 262.7255"
+[1] "Median = 100"
+[1] "Standard deviation = 523.5054"
+[1] "Mean = 262.7255"
+[1] "For candidate Huntsman, Jon:"
+[1] "Minimum = 3"
+[1] "Maximum = 5000"
+[1] "Mean = 877.7836"
+[1] "Median = 450"
+[1] "Standard deviation = 953.4794"
+[1] "Mean = 877.7836"
+[1] "For candidate Johnson, Gary Earl:"
+[1] "Minimum = 0.88"
+[1] "Maximum = 2500"
+[1] "Mean = 431.4215"
+[1] "Median = 250"
+[1] "Standard deviation = 627.438"
+[1] "Mean = 431.4215"
+[1] "For candidate McCotter, Thaddeus G:"
+[1] "Minimum = 25"
+[1] "Maximum = 500"
+[1] "Mean = 257.5"
+[1] "Median = 252.5"
+[1] "Standard deviation = 194.0146"
+[1] "Mean = 257.5"
+[1] "For candidate Obama, Barack:"
+[1] "Minimum = 0.09"
+[1] "Maximum = 25800"
+[1] "Mean = 130.571"
+[1] "Median = 50"
+[1] "Standard deviation = 318.7943"
+[1] "Mean = 130.571"
+[1] "For candidate Paul, Ron:"
+[1] "Minimum = 1.2"
+[1] "Maximum = 5000"
+[1] "Mean = 159.7564"
+[1] "Median = 100"
+[1] "Standard deviation = 283.1371"
+[1] "Mean = 159.7564"
+[1] "For candidate Pawlenty, Timothy:"
+[1] "Minimum = 35"
+[1] "Maximum = 10000"
+[1] "Mean = 2128.6817"
+[1] "Median = 2500"
+[1] "Standard deviation = 1369.6303"
+[1] "Mean = 2128.6817"
+[1] "For candidate Perry, Rick:"
+[1] "Minimum = 10"
+[1] "Maximum = 5000"
+[1] "Mean = 1439.7499"
+[1] "Median = 1000"
+[1] "Standard deviation = 1104.6707"
+[1] "Mean = 1439.7499"
+[1] "For candidate Roemer, Charles E. 'Buddy' III:"
+[1] "Minimum = 1"
+[1] "Maximum = 100"
+[1] "Mean = 58.4928"
+[1] "Median = 50"
+[1] "Standard deviation = 38.7943"
+[1] "Mean = 58.4928"
+[1] "For candidate Romney, Mitt:"
+[1] "Minimum = 1"
+[1] "Maximum = 30000"
+[1] "Mean = 441.4604"
+[1] "Median = 100"
+[1] "Standard deviation = 744.5348"
+[1] "Mean = 441.4604"
+[1] "For candidate Santorum, Rick:"
+[1] "Minimum = 1"
+[1] "Maximum = 5000"
+[1] "Mean = 208.373"
+[1] "Median = 100"
+[1] "Standard deviation = 424.7943"
+[1] "Mean = 208.373"
+[1] "For candidate Stein, Jill:"
+[1] "Minimum = 5"
+[1] "Maximum = 2500"
+[1] "Mean = 284.0782"
+[1] "Median = 250"
+[1] "Standard deviation = 369.4379"
+[1] "Mean = 284.0782"
+The first six z-scores are as follows:
+head(d) #original contribution
+[1]  15  35  25 100 500  56
+> head(z) #zscore of contribution
+[1] -0.3802516 -0.3329353 -0.3565935 -0.1791572  0.7671695 -0.2832531
+APPENDIX: Code used
+#NOTE: This is R code. I ran out of time to learn Python in addition to Unix and Github. Next week, hopefully
+
+#CREATE FUNCTION TO COMPUTE ALL STATISTICS
+
+stats=function(d) #computes all statistics
+{
+	print(paste("Minimum = ",round(min(d),4), sep=""))
+	print(paste("Maximum = ",round(max(d),4), sep=""))
+	print(paste("Mean = ",round(mean(d),4), sep=""))
+	print(paste("Median = ",round(median(d),4), sep=""))
+	print(paste("Standard deviation = ",round(sd(d),4), sep=""))
+	print(paste("Mean = ",round(mean(d),4), sep=""))
+}
+
+######READ IN FILE
+
+toDir="/Volumes/NO NAME/Grad school_112212/Grad school/Class/Data mining"
+setwd(toDir)
+filename="P00000001-CA.csv"
+F=read.csv(filename, header=T, row.names=NULL) #read in file
+
+d=D$contbr_occupation ##had some file input difficulty, so column names are shifted
+		##contbr-occupation corresponds to the contb_receipt_amt column 
+d=d[which(d>0)] #drop 8120 data points with negative contributions.
+
+#GET STATS
+stats(d)
+print (sort(unique(D$cand_id))) #Prints the names of different candidates. again, column names are shifted. 
+range=abs(min(d))+abs(max(d)) #range of data
+f=(d-min(d))/range #normalize data, which is very right-skewed due to a few very large donations
+print(f)
+
+###EXTRA CREDIT
+print("EXTRA CREDIT")
+
+##z-scores
+print("Z-scores") 
+z=(d-mean(d))/sd(d)
+print(z)
+
+#stats by candidate
+cands=sort(unique(D$cand_id))
+for (i in i:length(cands))
+{
+temp=subset(D, cand_id==as.character(cands[i]))
+d=temp$contbr_occupation
+d=d[which(d>0)] #drop data points with negative contributions.
+print(paste("For candidate ", as.character(cands[i]),":",sep=""))
+stats(d)
+}
+
+
+
