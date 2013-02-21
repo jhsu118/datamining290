@@ -1,3 +1,4 @@
+print ("Home")
 from mrjob.job import MRJob
 from mrjob.protocol import JSONValueProtocol
 
@@ -8,16 +9,21 @@ WORD_RE = re.compile(r"[\w']+")
 class UniqueReview(MRJob):
     INPUT_PROTOCOL = JSONValueProtocol
 
-    def extract_words(self, _, record):
+    def extract_words(self, _, record):  #MAP1
         """Take in a record, filter by type=review, yield <word, review_id>"""
+           
+            """Extract words using a regular expression.  Normalize the text to
+        ignore capitalization."""
         if record['type'] == 'review':
-            ###
-            # TODO: for each word in the review, yield the correct key,value
+            for word in WORD_RE.findall(record['text']):
+                yield [word.lower(), 1]
+
+ # TODO: for each word in the review, yield the correct key,value
             # pair:
-            # for word in ____:
-            #   yield [ ___ , ___ ]
+            # for word in WORD_RE.findall(record, ['text']):
+            #   yield [ word , review_id ]
             ##/
-hllo
+
     def count_reviews(self, word, review_ids):
         """Count the number of reviews a word has appeared in.  If it is a
         unique word (ie it has only been used in 1 review), output that review
@@ -26,7 +32,7 @@ hllo
         unique_reviews = set(review_ids)  # set() uniques an iterator
         ###
         # TODO: yield the correct pair when the desired condition is met:
-        # if ___:
+        # if sleng==1:
         #     yield [ ___ , ___ ]
         ##/
 
