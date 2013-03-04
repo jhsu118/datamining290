@@ -15,7 +15,7 @@ class UniqueReview(MRJob):
         """Extract words using a regular expression.  Normalize the text to ignore capitalization."""
         if record['type'] == 'review':
             for word in WORD_RE.findall(record['text']):
-                yield [word.lower(), review_id]
+                yield [word.lower(), record['review_id']]
 
  # TODO: for each word in the review, yield the correct key,value
             # pair:
