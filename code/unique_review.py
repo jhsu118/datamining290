@@ -1,4 +1,4 @@
-print ("Home")
+
 from mrjob.job import MRJob
 from mrjob.protocol import JSONValueProtocol
 
@@ -15,7 +15,7 @@ class UniqueReview(MRJob):
         """Extract words using a regular expression.  Normalize the text to ignore capitalization."""
         if record['type'] == 'review':
             for word in WORD_RE.findall(record['text']):
-                yield [word.lower(), review_id]
+                yield [word.lower(), record['review_id']]
 
  # TODO: for each word in the review, yield the correct key,value
             # pair:
@@ -23,23 +23,22 @@ class UniqueReview(MRJob):
             #   yield [ , ]
             ##/
 
-    def count_reviews(self, word, review_id):
+    def count_reviews(self, word, review_ids):
         """Count the number of reviews a word has appeared in.  If it is a
         unique word (ie it has only been used in 1 review), output that review
         and 1 (the number of words that were unique)."""
 
-        unique_reviews = set(review_id)  # set() uniques an iterator
-        if sleng(word)==1:
-               yield[word, sum(review_id)]
+        unique_reviews = set(review_ids)  # set() uniques an iterator
+        if len(unique_reviews)==1:
+            yield [list(unique_reviews), 1]
         ###
         # TODO: yield the correct pair when the desired condition is met:
-        # if sleng==1:
-        #     yield [ review_id , 1 ]
+       
         ##/
 
     def count_unique_words(self, review_id, unique_word_counts): ##MAPPER AND REDUCER
         """Output the number of unique words for a given review_id"""
-       yield[review_id, unique_word_counts]
+        yield[review_id, sum(unique_word_counts)]
         ###
         # TODO: summarize unique_word_counts and output the result
         # 
@@ -47,7 +46,8 @@ class UniqueReview(MRJob):
 
     def aggregate_max(self, review_id, unique_word_count): ##MAP3
         """Group reviews/counts together by the MAX statistic."""
-        yield["MAX",[review_id,sum(unique_word_count]]
+
+        yield ["MAX", tuple([unique_word_count,review_id]) ] #reverse so that can use MAx function later
         ###
         # TODO: By yielding using the same keyword, all records will appear in
         # the same reducer:
@@ -57,7 +57,8 @@ class UniqueReview(MRJob):
     def select_max(self, stat, count_review_ids): #REDUCE3
         """Given a list of pairs: [count, review_id], select on the pair with
         the maximum count, and output the result."""
-        yield[max(count_review_ids)]
+        yield stat, max(count_review_ids)
+        #yield [max(count_review_ids)]
         ###
         # TODO: find the review with the highest count, yield the review_id and
         # the count. HINT: the max() function will compare pairs by the first
