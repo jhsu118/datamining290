@@ -11,8 +11,8 @@ o_3 = 0.7311 ; w_36 = 0.2
 o_4 = 0.0179 ; w_46 = 0.7
 o_5 = 0.9933 ; w_56 = 1.5
 
-for i in range(0,1000000):
-# Output Error -0.11346127339699999
+for i in range(0,1):
+	# Output Error -0.11346127339699999
 	err_6 = o_6*(1-o_6)*(t_6-o_6)
 	#Errors for hidden layer
 	# Error for node 5 = -0.0011326458827956695
@@ -29,6 +29,7 @@ for i in range(0,1000000):
 	w_23 = w_23 + l*err_3*o_2
 	w_24 = w_24 + l*err_4*o_2
 	w_25 = w_25 + l*err_5*o_2
+	weights = [err_5, err_4, err_3,err_6, w_25,w_23,w_24,w_13,w_14,w_15,w_36,w_46,w_56]
 	#calculate new outputs
 	o_3 = 1/(1+math.exp(-(o_1*w_13+o_2*w_23)))
 	o_4 = 1/(1+math.exp(-(o_1*w_14+o_2*w_24)))
@@ -36,3 +37,5 @@ for i in range(0,1000000):
 	o_6 = 1/(1+math.exp(-(o_3*w_36+o_4*w_46+o_5*w_56)))
 	print "iteration %d" % (i)
 	print "o_6 %s" % o_6
+	print "weights " , weights
+
