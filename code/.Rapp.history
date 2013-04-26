@@ -1,0 +1,409 @@
+getwd()
+data=read.csv("price-elasticity.csv")
+head(data)
+data$Rooms
+fix(data)
+weekdays=subset(data, DOW<6)
+dim(weekdays)
+dim(data)
+names(data)
+plot(weekdays$Rate, weekdays$Room)
+plot(log(weekdays$Rate), plot(weekdays$Room))#
+mWD=lm(log(weekdays$Room)~log(weekdays$Rate))
+str(weekdays)
+data=read.csv("price-elasticity.csv")#
+data$Rate=as.numeric(data$Rate)#
+weekdays=subset(data, DOW<6)#
+plot(weekdays$Rate, weekdays$Room)#
+plot(log(weekdays$Rate), plot(weekdays$Room))#
+mWD=lm(log(weekdays$Room)~log(weekdays$Rate))
+str(weekdays)
+fix(weekdays)
+gsub(data, $,"")
+gsub(data, "$,"")
+gsub(data, "$","")
+data2=gsub(data, "$","")
+head(data2)
+data2=gsub(data$Rate, "$","")
+head(data2)
+data2=gsub(data$Rate, "[$]","")
+head(data2)
+data2=gsub("$","", data$Rate)
+head(data2)
+head(data)
+setwd("/Users/joannahsu/Documents/Courses/datamining290/code")#
+data=read.csv("price-elasticity.csv")#
+data2=gsub("$","", data$Rate)
+head(data2)
+head(data)
+clean <- function(ttt){as.numeric( gsub('[^a-zA-Z0-9.]', '', ttt))}#
+ data[] <- sapply(data, clean)
+data
+str9data)
+str(data)
+weekdays=subset(data, DOW<6)#
+plot(weekdays$Rate, weekdays$Room)#
+plot(log(weekdays$Rate), plot(weekdays$Room))#
+mWD=lm(log(weekdays$Room)~log(weekdays$Rate))
+plot(weekdays$Rate, weekdays$Rooms)#
+plot(log(weekdays$Rate), plot(weekdays$Rooms))#
+mWD=lm(log(weekdays$Rooms)~log(weekdays$Rate))
+plot(log(weekdays$Rate), log(weekdays$Rooms))
+summary(mWD)
+coef(mWD)
+weekends=subset(data, DOW>=6)#
+plot(weekends$Rate, weekends$Rooms)#
+plot(log(weekends$Rate), log(weekends$Rooms))#
+mWE=lm(log(weekends$Rooms)~log(weekends$Rate))#
+summary(mWE)
+mWE=lm(log(weekends$Rate)~log(weekends$Rooms))#
+summary(mWE)
+plot(log(weekends$eRooms, log(weekends$Rate))
+)
+plot(log(weekends$Rooms, log(weekends$Rate))
+)
+dim(weekends)
+table(data$DOW)
+names(data)
+str(weekends)
+str(data)
+setwd("/Users/joannahsu/Documents/Courses/datamining290/code")#
+data=read.csv("price-elasticity.csv")#
+#
+clean <- function(ttt){as.numeric( gsub('[^a-zA-Z0-9.]', '', ttt))}#
+data[] <- sapply(data, clean)
+data
+weekends=subset(data, DOW>=6)#
+plot(weekends$Rate, weekends$Rooms)#
+plot(log(weekends$Rooms, log(weekends$Rate))#
+mWE=lm(log(weekends$Rate)~log(weekends$Rooms))#
+summary(mWE)
+plot(log(weekends$Rooms, log(weekends$Rate))
+)
+str(weekends)
+head(data)
+head(weekends)
+str(weekends)
+fix(weekends)
+plot(log(weekends$Rooms), log(weekends$Rate))
+summary(mWE)
+weekdays=subset(data, DOW>=6)#
+plot(weekdays$Rooms, weekdays$Rate)#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+mWD=lm(log(weekdays$Rate)~log(weekdays$Rooms))#
+summary(mWD)
+par(mfrow=c(1,2))#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+plot(log(weekends$Rooms), log(weekends$Rate))
+par(mfrow=c(1,2), mar=c(5,3,3,3))#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+plot(log(weekends$Rooms), log(weekends$Rate))
+ar(mfrow=c(1,2), mar=c(10,3,3,3))#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+plot(log(weekends$Rooms), log(weekends$Rate))
+par(mfrow=c(1,2), mar=c(10,3,3,3))#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+plot(log(weekends$Rooms), log(weekends$Rate))
+ar(mfrow=c(1,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+plot(log(weekends$Rooms), log(weekends$Rate))
+par(mfrow=c(1,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+plot(log(weekends$Rooms), log(weekends$Rate))
+summary(mWD)
+weekdays=subset(data, DOW<6)#
+plot(weekdays$Rooms, weekdays$Rate)#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+mWD=lm(log(weekdays$Rate)~log(weekdays$Rooms))#
+summary(mWD)#
+#
+par(mfrow=c(1,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+plot(log(weekends$Rooms), log(weekends$Rate))
+summarypar(mfrow=c(1,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rooms), log(weekdays$Rate), xlim=c(3,8.5))#
+plot(log(weekends$Rooms), log(weekends$Rate), xlim=c(3,8.5))
+par(mfrow=c(1,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rooms), log(weekdays$Rate), xlim=c(3,8.5))#
+plot(log(weekends$Rooms), log(weekends$Rate), xlim=c(3,8.5))
+setwd("/Users/joannahsu/Documents/Courses/datamining290/code")#
+data=read.csv("price-elasticity.csv")#
+#
+clean <- function(ttt){as.numeric( gsub('[^a-zA-Z0-9.]', '', ttt))}#
+data[] <- sapply(data, clean)#
+weekends=subset(data, DOW>=6)#
+plot(weekends$Rooms, weekends$Rate)#
+plot(log(weekends$Rooms), log(weekends$Rate))#
+mWE=lm(log(weekends$Rooms)~log(weekends$Rate))#
+summary(mWE)#
+#
+weekdays=subset(data, DOW<6)#
+plot(weekdays$Rooms, weekdays$Rate)#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+mWD=lm(log(weekdays$Rooms)~log(weekdays$Rate))#
+summary(mWD)#
+#
+par(mfrow=c(1,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rooms), log(weekdays$Rate), xlim=c(3,8.5))#
+plot(log(weekends$Rooms), log(weekends$Rate), xlim=c(3,8.5))
+coef(mWD)[2]
+coef(mWE)[2]
+summary(mWE)
+par(mfrow=c(1,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rooms), log(weekdays$Rate), xlim=c(3,8.5))#
+plot(log(weekends$Rooms), log(weekends$Rate), xlim=c(3,8.5))#
+plot(log(weekdays$Rate), log(weekdays$Rooms))#
+plot(log(weekends$Rate), log(weekends$Rooms))
+WE2=lm(log(weekends$Rate)~log(weekends$Rooms))#
+summary(mWE)#
+#
+weekdays=subset(data, DOW<6)#
+plot(weekdays$Rooms, weekdays$Rate)#
+plot(log(weekdays$Rooms), log(weekdays$Rate))#
+mWD=lm(log(weekdays$Rooms)~log(weekdays$Rate))#
+mWD2=lm(log(weekdays$Rate)~log(weekdays$Rooms))
+mWE2=lm(log(weekends$Rate)~log(weekends$Rooms))
+summary(mWE2)
+summary(data$Rate)
+?ifelse
+results=matrix(NA, 600, 4)#
+for (iPrice in 1:600)#
+{#
+Q=exp(coef(mWE)[1]-coef(mWE)[2]*log(iPrice))#
+TotalRevenue=iPrice*Q#
+possible=ifelse (Q<=100, TRUE, FALSE)#
+results[iPrice, ]=c(iPrice, Q, TotalRevenue, possible)#
+}
+results
+fix(results)
+summary(mWE)
+results=matrix(NA, 600, 4)#
+for (iPrice in 1:600)#
+{#
+Q=exp(coef(mWE)[1]+coef(mWE)[2]*log(iPrice))#
+TotalRevenue=iPrice*Q#
+possible=ifelse (Q<=100, TRUE, FALSE)#
+results[iPrice, ]=c(iPrice, Q, TotalRevenue, possible)#
+}
+fix(results)
+coef(mWE)[1]
+14-1.4*log(500)
+exp(5.3)
+iPrice
+Q
+fix(results)
+possible
+results=matrix(NA, 600, 4)#
+for (iPrice in 1:600)#
+{#
+Q=as.numeric(exp(coef(mWE)[1]+coef(mWE)[2]*log(iPrice)))#
+TotalRevenue=iPrice*Q#
+possible=ifelse (Q<=100, TRUE, FALSE)#
+results[iPrice, ]=c(iPrice, Q, TotalRevenue, possible)#
+}
+fix(results)
+Q
+possible
+fix(results)
+esults=matrix(NA, 5000, 4)#
+for (iPrice in 1:5000)#
+{#
+Q=as.numeric(exp(coef(mWE)[1]+coef(mWE)[2]*log(iPrice)))#
+TotalRevenue=iPrice*Q#
+possible=ifelse (Q<=100, TRUE, FALSE)#
+results[iPrice, ]=c(iPrice, Q, TotalRevenue, possible)#
+}
+iprice
+iprice
+iPrice
+results=matrix(NA, 5000, 4)#
+for (iPrice in 1:5000)#
+{#
+Q=as.numeric(exp(coef(mWE)[1]+coef(mWE)[2]*log(iPrice)))#
+TotalRevenue=iPrice*Q#
+possible=ifelse (Q<=100, TRUE, FALSE)#
+results[iPrice, ]=c(iPrice, Q, TotalRevenue, possible)#
+}
+fix(results)
+results2=subset(results, possible=TRUE)#
+plot(results2$iPrice, results2$TotalRevenue)
+dim(results2)
+fix(results2)
+dim(results)
+results=as.data.frame(results)#
+names(results)=c("Price", "RoomsSold", "TotalRevenue", "possible")#
+results2=subset(results, possible=TRUE)#
+plot(results2$iPrice, results2$TotalRevenue)
+dim(results2)
+head(results)
+results2=subset(results, possible==TRUE)#
+plot(results2$Price, results2$TotalRevenue)
+par(mfrow=c(1,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rate), log(weekdays$Rooms))#
+plot(results2$Price, results2$TotalRevenue, main="Revenue by price")
+par(mfrow=c(2,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(price)",main="Rate vs. price:weekdays")#
+plot(results2$Price, results2$TotalRevenue, xlab="Room Price", main="Total revenue by price: weekends")
+par(mfrow=c(2,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. Rooms: weekdays")#
+plot(results2$Price, results2$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekends")
+results=matrix(NA, 5000, 4)#
+for (iPrice in 1:5000)#
+{#
+Q=as.numeric(exp(coef(mWE)[1]+coef(mWE)[2]*log(iPrice)))#
+TotalRevenue=iPrice*Q#
+possible=ifelse (Q<=100, TRUE, FALSE)#
+results[iPrice, ]=c(iPrice, Q, TotalRevenue, possible)#
+}#
+results=as.data.frame(results)#
+names(results)=c("Price", "RoomsSold", "TotalRevenue", "possible")#
+resultsWE=subset(results, possible==TRUE)#
+#
+#repeat for weekdays#
+results=matrix(NA, 5000, 4)#
+for (iPrice in 1:5000)#
+{#
+Q=as.numeric(exp(coef(mWD)[1]+coef(mWD)[2]*log(iPrice)))#
+TotalRevenue=iPrice*Q#
+possible=ifelse (Q<=100, TRUE, FALSE)#
+results[iPrice, ]=c(iPrice, Q, TotalRevenue, possible)#
+}#
+results=as.data.frame(results)#
+names(results)=c("Price", "RoomsSold", "TotalRevenue", "possible")#
+resultsWD=subset(results, possible==TRUE)#
+par(mfrow=c(2,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, results2$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, results2$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekends")
+par(mfrow=c(2,2), mar=c(9,6,3,3))#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekends")
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekends")
+par(mfrow=c(2,2), mar=c(9,6,3,3))#
+#plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,200),xlab="Room Rate", main="Total revenue by price: weekends")
+plot(resultsWE$TotalRevenue)
+par(mfrow=c(2,2), mar=c(9,6,3,3))#
+#plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,200),xlab="Room Rate", main="Total revenue by price: weekends")
+par(mfrow=c(2,3), mar=c(9,6,3,3))#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekdays")#
+plot(resultsWD$RoomsSold, resultsWD$TotalRevenue, xlim=c(0,100),xlab="Rooms Sold", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,100),xlab="Rooms Sold", main="Total revenue by price: weekends")
+ar(mfrow=c(2,3), mar=c(12,6,1,3))#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekdays")#
+plot(resultsWD$RoomsSold, resultsWD$TotalRevenue, xlim=c(0,100),xlab="Rooms Sold", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,100),xlab="Rooms Sold", main="Total revenue by price: weekends")
+par(mfrow=c(2,3), mar=c(12,6,1,3))#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekdays")#
+plot(resultsWD$RoomsSold, resultsWD$TotalRevenue, xlim=c(0,100),xlab="Rooms Sold", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,100),xlab="Rooms Sold", main="Total revenue by price: weekends")
+par(mfrow=c(2,3), mar=c(12,6,1,3), oma=c(4,4,4,4))#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekdays")#
+plot(resultsWD$RoomsSold, resultsWD$TotalRevenue, xlim=c(0,100),xlab="Rooms Sold", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,100),xlab="Rooms Sold", main="Total revenue by price: weekends")
+par(mfrow=c(2,3), mar=c(12,6,1,3), oma=c(2,2,2,2,cex.main=.7)#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="Total revenue by price: weekdays")#
+plot(resultsWD$RoomsSold, resultsWD$TotalRevenue, xlim=c(0,100),xlab="Rooms Sold", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,100),xlab="Rooms Sold", main="Total revenue by price: weekends")
+par(mfrow=c(2,3), mar=c(12,6,1,3), oma=c(2,2,2,2,cex.main=.7)#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="Total revenue by price: weekdays")#
+plot(resultsWD$RoomsSold, resultsWD$TotalRevenue, xlim=c(0,100), ylab= "total revenue",xlab="Rooms Sold", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,100), ylab= "total revenue",xlab="Rooms Sold", main="Total revenue by price: weekends")
+par(mfrow=c(2,3), mar=c(12,6,1,3), oma=c(2,2,2,2,cex.main=.7)#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="Total revenue by price: weekdays")#
+plot(resultsWD$RoomsSold, resultsWD$TotalRevenue, xlim=c(0,100), ylab= "total revenue",xlab="Rooms Sold", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,100), ylab= "total revenue",xlab="Rooms Sold", main="Total revenue by price: weekends")
+par(mfrow=c(2,3), mar=c(12,6,1,3), oma=c(2,2,2,2),cex.main=.7)#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="Total revenue by price: weekdays")#
+plot(resultsWD$RoomsSold, resultsWD$TotalRevenue, xlim=c(0,100), ylab= "total revenue",xlab="Rooms Sold", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,100), ylab= "total revenue",xlab="Rooms Sold", main="Total revenue by price: weekends")
+fix(resultsWD)
+esults=matrix(NA, 5000, 4)#
+for (iPrice in 1:5000)#
+{#
+Q=as.numeric(round(exp(coef(mWD)[1]+coef(mWD)[2]*log(iPrice))),0)#
+TotalRevenue=iPrice*Q#
+possible=ifelse (Q<=100, TRUE, FALSE)#
+results[iPrice, ]=c(iPrice, Q, TotalRevenue, possible)#
+}#
+results=as.data.frame(results)#
+names(results)=c("Price", "RoomsSold", "TotalRevenue", "possible")#
+resultsWD=subset(results, possible==TRUE)
+fix(results)
+results=matrix(NA, 5000, 4)#
+for (iPrice in 1:5000)#
+{#
+Q=as.numeric(round(exp(coef(mWE)[1]+coef(mWE)[2]*log(iPrice))),0)#
+TotalRevenue=iPrice*Q#
+possible=ifelse (Q<=100, TRUE, FALSE)#
+results[iPrice, ]=c(iPrice, Q, TotalRevenue, possible)#
+}#
+results=as.data.frame(results)#
+names(results)=c("Price", "RoomsSold", "TotalRevenue", "possible")#
+resultsWE=subset(results, possible==TRUE)#
+#
+#repeat for weekdays#
+results=matrix(NA, 5000, 4)#
+for (iPrice in 1:5000)#
+{#
+Q=as.numeric(round(exp(coef(mWD)[1]+coef(mWD)[2]*log(iPrice))),0)#
+TotalRevenue=iPrice*Q#
+possible=ifelse (Q<=100, TRUE, FALSE)#
+results[iPrice, ]=c(iPrice, Q, TotalRevenue, possible)#
+}#
+results=as.data.frame(results)#
+names(results)=c("Price", "RoomsSold", "TotalRevenue", "possible")#
+resultsWD=subset(results, possible==TRUE)#
+par(mfrow=c(2,3), mar=c(12,6,1,3), oma=c(2,2,2,2),cex.main=.7)#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="Total revenue by price: weekdays")#
+plot(resultsWD$RoomsSold, resultsWD$TotalRevenue, xlim=c(0,100), ylab= "total revenue",xlab="Rooms Sold", main="Total revenue by price: weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="Rate vs. rooms: weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="Total revenue by price: weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,100), ylab= "total revenue",xlab="Rooms Sold", main="Total revenue by price: weekends")
+par(mfrow=c(2,3), mar=c(12,6,1,3), oma=c(2,2,2,2),cex.main=1)#
+plot(log(weekdays$Rate), log(weekdays$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="weekdays")#
+plot(resultsWD$Price, resultsWD$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main="weekdays")#
+plot(resultsWD$RoomsSold, resultsWD$TotalRevenue, xlim=c(0,100), ylab= "total revenue",xlab="Rooms Sold", main=" weekdays")#
+plot(log(weekends$Rate), log(weekends$Rooms), xlab="log(Rate)", ylab="log(Rooms)",main="weekends")#
+plot(resultsWE$Price, resultsWE$TotalRevenue, xlab="Room Rate", ylab= "total revenue",main=" weekends")#
+plot(resultsWE$RoomsSold, resultsWE$TotalRevenue, xlim=c(0,100), ylab= "total revenue",xlab="Rooms Sold", main="weekends")
+fix(resultsWD)
+fix(resultsWE)
+fix(data)
+data.s=data[order(data$Rate),]
+fix(data.s)

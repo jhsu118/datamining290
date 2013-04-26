@@ -1,0 +1,35 @@
+from mrjob.job import MRJob
+from mrjob.protocol import JSONValueProtocol
+
+class UserSimilarity(MRJob):
+    INPUT_PROTOCOL = JSONValueProtocol
+
+    def extract_users(self, , ):
+    """Take in a record, filter by type=review, yield <user_id, business_id>"""
+    if record['type'] == 'review':
+         yield [user_id, business_id]
+    
+    def list_reviews(self,):
+    """Aggreggate by user_id, yield <user_id, business_ids>"""
+        yield[user_id, business_ids]
+
+    def Jaccard(self):
+    """Pair all possible users and compute Jaccards. yield maximum of these Jaccards and the user_id of the person high match was achieved with"""
+    for user_id
+        Jaccards[i] = business_ids.intersection(user_id[user+1].business_ids) /  business_ids.union(user_id[user+1].business_ids)
+            yield [user_id, [max(Jaccards), user_id]]
+
+    def maxJaccard(self):
+        """Select pair that is most similar and output that pair"""
+        yield[max(Jaccards), user_id]
+    ###
+    # TODO: write the functions needed to
+    # 1) find potential matches, 
+    # 2) calculate the Jaccard between users, with a user defined as a set of
+    # reviewed businesses
+    ##/
+
+    def steps(self):
+        """TODO: Document what you expect each mapper and reducer to produce:
+        mapper1: <line, record> => <key, value>
+        reducer1: <key, 
